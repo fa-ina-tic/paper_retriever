@@ -1,1 +1,2 @@
 unstructured[all-docs]==0.15.10
+watchdog==5.0.2
