@@ -9,28 +9,10 @@ faiss indexing 중 무엇을 default로 지원하고, 어떤 domain에서 어떤
   1. 인덱스의 수정, 추가, 제거의 **성능이 좋아야 합니다**
   2. 검색 속도가 빨라야 합니다.
 
-### 지원하는 인덱스
+### 인덱스
 ---
-1. Faiss
-   1. IndexFlatL2
-   2. IndexFlatIP
-   3. IndexHNSWFlat
-   4. IndexIVFFlat
-   5. IndexLSH
-   6. IndexScalarQuantizer
-   7. IndexPQ
-   8. IndevIVFScalarQuantizer
-   9. IndexIVFPQ
-   10. IndexIVFPQR
+[reference](https://github.com/facebookresearch/faiss/wiki/Faiss-indexes)
 
-### IndexFlatL2
----
-#### 개요
+특이사항
 
-#### 알고리즘
-
-#### 인덱스 추가 시
-
-#### 인덱스 제거 시
-
-#### 인덱스 수정 시
+`Flat`의 경우 `vector id`를 저장하지 않음(단순 sequential numbering만 사용) -> `id`를 사용한 데이터추가 불가능
