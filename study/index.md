@@ -1,4 +1,4 @@
-> [!IMPORTANT] LlamaIndex & Langchain은 추상화 정도가 높아 세부적인 customize가 불가능한 경우가 많습니다. 현재 customize한 document parser를 개발 중이고, 이를 통해 문서를 Parsing해야 하는 이 프로젝트에서는 해당 프레임워크들을 고려하지 않겠습니다.
+> [!IMPORTANT] LlamaIndex & Langchain은 추상화 정도가 높아 세부적인 customize가 불가능한 경우가 많습니다. 현재 customize한 document parser를 사용 중이고, 이를 통해 문서를 Parsing해야 하는 이 프로젝트에서는 해당 프레임워크들을 고려하지 않겠습니다.
 
 ### 목적
 ---

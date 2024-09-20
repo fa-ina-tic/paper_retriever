@@ -14,3 +14,6 @@ class IndexManager:
   
   def status():
     return None
+  
+  def load_index():
+    return None
