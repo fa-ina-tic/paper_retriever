@@ -5,10 +5,10 @@ from typing import List
 
 from watchdog.observers import Observer
 from watchdog.events import (FileMovedEvent,
-															FileCreatedEvent,
-															FileDeletedEvent,
-															FileModifiedEvent,
-															FileSystemEventHandler)
+							FileCreatedEvent,
+							FileDeletedEvent,
+							FileModifiedEvent,
+							FileSystemEventHandler)
 
 class EventHandler(FileSystemEventHandler):
 	def __init__(self, dir_path:str):

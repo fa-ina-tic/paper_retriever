@@ -7,7 +7,10 @@ class BaseIndexer:
   
   def _delete_by_query():
     return None
-  
 
 class IndexManager:
   def __init__():
+    return None
+  
+  def status():
+    return None
