@@ -1,4 +1,4 @@
 **/__pycache__
 **/.env
 **/.venv
-paper_retriever/paper_retriever/data/*
+.trunk
