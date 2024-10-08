@@ -1,14 +1,12 @@
 FROM python:3.9-slim
 
-WORKDIR /app
-
-COPY . /app
-
 RUN apt-get update && apt-get install -y \
     vim \
     g++ \
     && apt-get clean
 
+    WORKDIR /app
+COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
-ENTRYPOINT [ "bin/bash" ]
+ENTRYPOINT [ "/bin/bash" ]

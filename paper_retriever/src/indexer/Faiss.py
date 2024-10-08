@@ -1,25 +1,31 @@
 from typing import List, Union
 
-from rank_bm25 import BM25kapi
+from rank_bm25 import BM25Okapi
 import faiss
-from konlpy.tag import Mecab
+from mecab import MeCab
 import numpy as np
+from collections import defaultdict
 
-from utils import embed, rerank
+from utils import embed, rerank, info
 
 class FaissIndexer():
     def __init__(self, ):
-        self.tokenizer = Mecab()
-        pass
+        self.tokenizer = MeCab()
 
     def save_index(self, documents:List[str], path:str):
         pass
+
+    def create_inverted_index_per_document(self, doc, path) -> None:
+        inverted_index = defaultdict(list)
+        words = self.tokenizer.morphs(doc.lower())
+        for word in set(words):
+            inverted_index[word].append(path)
+        return inverted_index
 
 class FaissRetriever():
     def __init__(self, path:Union[str, List]):
         self.index = self._load_index(path)
         self.tokenizer = Mecab()
-        pass
 
     def _load_index(self, path:Union[str, List]):
         shard_index = faiss.IndexShards() ## TODO: add shape
@@ -41,8 +47,13 @@ class FaissRetriever():
         return self.index.search(embed(q))
 
     def textsearch(self, q, ):
-        self.
-        return self.
+        # self.
+        # return self.
+        pass
 
     def hybridsearch(self, q, ):
         pass
+
+if __name__ == "__main__":
+    sample = FaissIndexer()
+    print(sample.tokenizer.morphs("나는 여기에서 뭐하고 있는거징"))
